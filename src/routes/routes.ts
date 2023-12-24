@@ -6,11 +6,13 @@ import {
   getUserById,
   updateUserById,
 } from "../controllers/userController";
+
 import {
   addNewUsers,
   deleteManyUsers,
   getAllUsers,
 } from "../controllers/usersController";
+
 
 const handlerFunction = (req: Request, res: Response) => {
   return res.send("Not Implemented");

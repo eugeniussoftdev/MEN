@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 
 import { User } from "../models/userModel";
 
+
 export const addNewUser = async (req: Request, res: Response) => {
   const newUser = new User(req.body);
 
