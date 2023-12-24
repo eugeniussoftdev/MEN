@@ -7,6 +7,13 @@ import {
   updateUserById,
 } from "../controllers/userController";
 
+import {
+  addNewUsers,
+  deleteManyUsers,
+  getAllUsers,
+} from "../controllers/usersController";
+
+
 const handlerFunction = (req: Request, res: Response) => {
   return res.send("Not Implemented");
 };
@@ -24,4 +31,10 @@ export const routes = (app: Express) => {
     .post(addNewUser)
     .put(updateUserById)
     .delete(deleteUser);
+
+  app
+    .route("/users")
+    .get(getAllUsers)
+    .post(addNewUsers)
+    .delete(deleteManyUsers);
 };
