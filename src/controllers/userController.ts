@@ -1,7 +1,6 @@
-import express, { Express, Request, Response } from "express";
-import mongoose from "mongoose";
+import { Request, Response } from "express";
 
-import { User, UserDocument } from "../models/userModel";
+import { User } from "../models/userModel";
 
 export const addNewUser = async (req: Request, res: Response) => {
   const newUser = new User(req.body);
